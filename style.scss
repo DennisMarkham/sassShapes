@@ -1,0 +1,30 @@
+div
+{
+	margin: 10px;
+}
+
+$elSizo: 100px;
+
+@mixin square($size)
+{
+	background-color: red;
+	width: $size;
+	height: $size;
+	border-style: solid;
+	border-width: $size/10;
+}
+
+#square
+{
+	@include square($elSizo);
+}
+
+#halfSquare
+{
+	@include square($elSizo / 2);
+}
+
+#quarterSquare
+{
+	@include square($elSizo / 4);
+}
