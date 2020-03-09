@@ -5,26 +5,31 @@ div
 
 $elSizo: 100px;
 
-@mixin square($size)
+@mixin square($size, $color)
 {
 	background-color: red;
 	width: $size;
 	height: $size;
+	border-color: black;
 	border-style: solid;
 	border-width: $size/10;
+	text-align: center;
+	color:$color;
+	font-size: $size/2;
+
 }
 
 #square
 {
-	@include square($elSizo);
+	@include square($elSizo, blue);
 }
 
 #halfSquare
 {
-	@include square($elSizo / 2);
+	@include square($elSizo / 2, yellow);
 }
 
 #quarterSquare
 {
-	@include square($elSizo / 4);
+	@include square($elSizo / 4, black);
 }

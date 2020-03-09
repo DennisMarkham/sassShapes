@@ -6,24 +6,36 @@ div {
   background-color: red;
   width: 100px;
   height: 100px;
+  border-color: black;
   border-style: solid;
   border-width: 10px;
+  text-align: center;
+  color: blue;
+  font-size: 50px;
 }
 
 #halfSquare {
   background-color: red;
   width: 50px;
   height: 50px;
+  border-color: black;
   border-style: solid;
   border-width: 5px;
+  text-align: center;
+  color: yellow;
+  font-size: 25px;
 }
 
 #quarterSquare {
   background-color: red;
   width: 25px;
   height: 25px;
+  border-color: black;
   border-style: solid;
   border-width: 2.5px;
+  text-align: center;
+  color: black;
+  font-size: 12.5px;
 }
 
 /*# sourceMappingURL=style.css.map */
