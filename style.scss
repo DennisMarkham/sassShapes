@@ -19,6 +19,22 @@ $elSizo: 100px;
 
 }
 
+@mixin circle($size)
+{
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+@mixin rectangle($size)
+{
+	width: $size;
+	height: $size / 2;
+	background-color: red;
+}
+
 #square
 {
 	@include square($elSizo, blue);
@@ -32,4 +48,21 @@ $elSizo: 100px;
 #quarterSquare
 {
 	@include square($elSizo / 4, black);
+}
+
+#circle
+{
+	@include circle(100px);
+	background-color: red;
+}
+
+#halfCircle
+{
+	@include circle(50px);
+	background-color: blue;
+}
+
+#rectangle
+{
+	@include rectangle(100px);
 }
