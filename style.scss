@@ -1,21 +1,23 @@
 div
 {
-	margin: 10px;
+  margin: 10px;
 }
 
 $elSizo: 100px;
 
-@mixin square($size, $color)
+@mixin square($size, $color, $border: true)
 {
-	background-color: red;
-	width: $size;
-	height: $size;
-	border-color: black;
-	border-style: solid;
-	border-width: $size/10;
-	text-align: center;
-	color:$color;
-	font-size: $size/2;
+  background-color: red;
+  width: $size;
+  height: $size;
+@if $border{
+  border-color: black;
+  border-style: solid;
+  border-width: $size/10;
+  }
+  text-align: center;
+  color:$color;
+  font-size: $size/2;
 
 }
 
@@ -30,39 +32,39 @@ $elSizo: 100px;
 
 @mixin rectangle($size)
 {
-	width: $size;
-	height: $size / 2;
-	background-color: red;
+  width: $size;
+  height: $size / 2;
+  background-color: red;
 }
 
 #square
 {
-	@include square($elSizo, blue);
+  @include square($elSizo, blue, $border: false);
 }
 
 #halfSquare
 {
-	@include square($elSizo / 2, yellow);
+  @include square($elSizo / 2, yellow);
 }
 
 #quarterSquare
 {
-	@include square($elSizo / 4, black);
+  @include square($elSizo / 4, black);
 }
 
 #circle
 {
-	@include circle(100px);
-	background-color: red;
+  @include circle(100px);
+  background-color: red;
 }
 
 #halfCircle
 {
-	@include circle(50px);
-	background-color: blue;
+  @include circle(50px);
+  background-color: blue;
 }
 
 #rectangle
 {
-	@include rectangle(100px);
+  @include rectangle(100px);
 }
