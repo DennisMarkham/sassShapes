@@ -35,17 +35,25 @@ div {
   font-size: 12.5px;
 }
 
-#circle {
+#circle100px {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   display: inline-block;
-  background-color: red;
+  background-color: blue;
 }
 
-#halfCircle {
+#circle50px {
   height: 50px;
   width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: blue;
+}
+
+#circle25px {
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   display: inline-block;
   background-color: blue;
@@ -55,6 +63,11 @@ div {
   width: 100px;
   height: 50px;
   background-color: red;
+}
+
+#text, #rectangle {
+  text-decoration: underline;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

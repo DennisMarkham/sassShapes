@@ -21,12 +21,21 @@ $elSizo: 100px;
 
 }
 
-@mixin circle($size)
+@mixin circle($size, $blue: false)
 {
   height: $size;
   width: $size;
   border-radius: 50%;
   display: inline-block;
+
+  @if $blue
+  {
+  background-color: blue;
+  }
+  @else 
+  {
+  background-color: red;
+  }
 
 }
 
@@ -52,19 +61,26 @@ $elSizo: 100px;
   @include square($elSizo / 4, black);
 }
 
-#circle
+$cSizes: 100px, 50px, 25px;
+
+@each $size in $cSizes
 {
-  @include circle(100px);
-  background-color: red;
+  #circle#{$size}
+  {
+@include circle($size, $blue: true);
+  }
 }
 
-#halfCircle
-{
-  @include circle(50px);
-  background-color: blue;
-}
+
 
 #rectangle
 {
   @include rectangle(100px);
+  @extend #text;
+}
+
+#text
+{
+  text-decoration: underline;
+  text-align: center;
 }
