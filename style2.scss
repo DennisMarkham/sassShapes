@@ -1,0 +1,54 @@
+$patriot: linear-gradient(to right, red, white, blue);
+
+@keyframes move {
+	0% {left: 0px;}
+	100% {left: 600px;}
+}
+
+#warning
+{
+	font-size: 200%;
+	font-style: bold;
+	color: red;
+}
+
+p
+{
+	@extend #warning;
+}
+
+@mixin square($size, $animated: false)
+{
+	height: $size;
+	width: $size;
+	border-width: $size / 10;
+	border-style: solid;
+	background: $patriot;
+	margin: $size / 2;
+	position: relative;
+
+	@if $animated
+	{
+animation-name: move;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	}
+}
+
+#square1
+{
+	@include square(20px, $animated: true);
+	
+}
+
+#square2
+{
+	@include square(40px);
+	
+	
+}
+
+#square3
+{
+	@include square(60px);
+}

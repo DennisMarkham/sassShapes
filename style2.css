@@ -1,0 +1,48 @@
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 600px;
+  }
+}
+#warning, p {
+  font-size: 200%;
+  font-style: bold;
+  color: red;
+}
+
+#square1 {
+  height: 20px;
+  width: 20px;
+  border-width: 2px;
+  border-style: solid;
+  background: linear-gradient(to right, red, white, blue);
+  margin: 10px;
+  position: relative;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+#square2 {
+  height: 40px;
+  width: 40px;
+  border-width: 4px;
+  border-style: solid;
+  background: linear-gradient(to right, red, white, blue);
+  margin: 20px;
+  position: relative;
+}
+
+#square3 {
+  height: 60px;
+  width: 60px;
+  border-width: 6px;
+  border-style: solid;
+  background: linear-gradient(to right, red, white, blue);
+  margin: 30px;
+  position: relative;
+}
+
+/*# sourceMappingURL=style2.css.map */

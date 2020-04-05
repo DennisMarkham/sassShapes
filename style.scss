@@ -5,6 +5,18 @@ div
 
 $elSizo: 100px;
 
+
+#donut1
+{
+  height: 1000px;
+  width: 1000px;
+  border-radius: 50%;
+  border-width: 50px;
+  border-color: black;
+  border-style: solid;
+}
+
+
 @mixin square($size, $color, $border: true)
 {
   background-color: red;
